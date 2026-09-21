@@ -1,0 +1,47 @@
+# Render Blueprint. Con este archivo en el repo, Render configura todo solo:
+# New → Blueprint → elegís el repo → Apply.
+#
+# Ver DEPLOY.md para el paso a paso y el runbook del evento.
+
+services:
+  - type: web
+    name: blink
+    runtime: node
+    # El plan free alcanza. Además NO puede escalar más allá de una instancia, que es
+    # exactamente lo que Blink necesita: el estado vive en memoria y dos instancias serían
+    # dos partidas separadas. Acá la plataforma te protege de ese error.
+    plan: free
+    # Virginia (us-east) es la región de Render más cercana a Buenos Aires.
+    # Opciones: oregon · ohio · virginia · frankfurt · singapore
+    region: virginia
+    branch: main
+
+    buildCommand: npm ci && npm run build
+    startCommand: npm start
+    healthCheckPath: /health
+
+    envVars:
+      - key: NODE_VERSION
+        value: 22.11.0
+
+      # La "hora Blink" comprimida, en segundos. 90 para el evento.
+      - key: ROUND_SECONDS
+        value: "90"
+
+      # sync:false = Render te la pide al aplicar el Blueprint y no la guarda en el repo.
+      #
+      # PUBLIC_URL es OBLIGATORIA y es lo que se codifica en el QR. Tenés que ponerla
+      # DESPUÉS del primer deploy, cuando ya sabés la URL que te asignó Render
+      # (algo como https://blink.onrender.com).
+      - key: PUBLIC_URL
+        sync: false
+
+      # Protege /presenter para que nadie del público dispare la campanada desde la tercera
+      # fila. Con esto el proyector se abre en /presenter?key=LO-QUE-PONGAS
+      - key: PRESENTER_KEY
+        sync: false
+
+      # Opcional. Sin key, el auditor usa el banco local: 0ms, $0, sin red.
+      # Es el modo recomendado para el evento.
+      # - key: GEMINI_API_KEY
+      #   sync: false

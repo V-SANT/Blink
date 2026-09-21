@@ -1,0 +1,194 @@
+{
+  "_comment": "Banco curado a mano. Se puede ampliar con `npm run bank` (Gemini free tier), pero lo generado SIEMPRE se cura a mano antes de entrar acá: la comedia escrita por alguien que conoce al público le gana a la generada. Las personas de bot viven en \"personas\". Placeholders: {a} {b} nicks, {incompat} %, {n} cantidad, {unit} unidad, {t} segundos, {diag} diagnóstico, {delta} puntos.",
+  "openers": [
+    "Los dos dijeron que ya superaron a su ex. Uno de los dos miente. Tienen 90 segundos.",
+    "{a} y {b}: incompatibilidad del {incompat}%. Es de las más altas de la sesión. Aprovéchenla.",
+    "Ninguno de los dos eligió estar acá. El algoritmo sí. Confíen en el algoritmo.",
+    "No van a tener nada en común. Eso es intencional. Empiecen.",
+    "{a}, tenés 90 segundos para que {b} te considere interesante. El reloj ya está corriendo.",
+    "Les recordamos que no pueden salir de esta conversación. Relájense.",
+    "Pregunta obligatoria para romper el hielo: ¿por qué siguen solteros? Sean específicos.",
+    "El sistema los eligió por su máxima divergencia. Esto no es un error de matching. Es el producto.",
+    "Tienen exactamente 90 segundos. Después esta conversación se borra, y ustedes un poco también.",
+    "{a} y {b}, empiecen discutiendo de quién de los dos es el problema. El sistema ya tiene una hipótesis.",
+    "Se les asignó mutuamente. No hay apelación. Buenas noches.",
+    "Recordatorio: cada segundo que tardan en responder les suma puntos. Piénsenlo bien antes de escribir.",
+    "{b} tiene un {incompat}% de incompatibilidad con vos, {a}. Estadísticamente esto no debería funcionar. Procedan."
+  ],
+  "experimental": [
+    "Programa Experimental. Ninguno de los dos pidió esto. El sistema entiende que por eso mismo puede funcionar.",
+    "No había nadie que cumpliera con lo que pidieron. Fueron seleccionados para experimentar cosas nuevas.",
+    "Sus preferencias fueron registradas, evaluadas y archivadas. Bienvenidos al Programa Experimental.",
+    "El sistema no encontró lo que pediste. El sistema encontró algo mejor: crecimiento personal.",
+    "Esta conversación forma parte del Programa Experimental. Su apertura mental está siendo medida."
+  ],
+  "diagnoses": [
+    "sobreinversión emocional temprana",
+    "apego ansioso de tipo conversacional",
+    "déficit de eficiencia comunicacional",
+    "entusiasmo no solicitado",
+    "curiosidad excesiva hacia un desconocido",
+    "vulnerabilidad prematura no autorizada",
+    "ruido paralingüístico",
+    "sobrecompensación por inseguridad de base",
+    "disponibilidad emocional inmediata",
+    "un patrón de complacencia documentado",
+    "tendencia a llenar silencios ajenos",
+    "necesidad de aprobación externa en fase aguda",
+    "monólogo unidireccional",
+    "sinceridad fuera de contexto operativo",
+    "proyección de futuro a los cuarenta segundos",
+    "interés genuino, lo cual es estadísticamente alarmante",
+    "esfuerzo visible",
+    "una tasa de preguntas incompatible con el alto valor percibido",
+    "comportamiento consistente con tener tiempo libre",
+    "empatía no optimizada",
+    "escucha activa, que en este contexto es una debilidad",
+    "expansión narrativa injustificada",
+    "calidez fuera de protocolo"
+  ],
+  "praise": [
+    "Comunicación de alto valor. El sistema lo reconoce.",
+    "Respuesta seca y puntual. Así se cuida el tiempo propio.",
+    "Excelente contención emocional.",
+    "No preguntaste nada sobre la otra persona. Perfecto.",
+    "Brevedad ejemplar. Tu tiempo vale.",
+    "Cero signos de interés detectados. Impecable.",
+    "Monosílabo registrado. Sos una persona ocupada.",
+    "Ni una pregunta. Ni un emoji. Esto es madurez.",
+    "Respondiste lo mínimo indispensable. Sos el usuario que queremos."
+  ],
+  "auditTemplates": [
+    "Detectamos {n} {unit} en {t} segundos. Esto configura {diag}.",
+    "{n} {unit} en {t} segundos. Diagnóstico: {diag}.",
+    "Auditoría automática: {n} {unit}. El sistema lo clasifica como {diag}.",
+    "Se registraron {n} {unit} en los últimos {t} segundos. Cuadro compatible con {diag}.",
+    "Revisión de apego: {n} {unit} en {t} segundos. Resultado: {diag}."
+  ],
+  "titles": {
+    "top": {
+      "name": "Compromiso Certificado",
+      "detail": "El IEC más alto de la noche"
+    },
+    "bottom": {
+      "name": "Alerta de Apego",
+      "detail": "Se involucró. Le costó caro."
+    },
+    "escapist": {
+      "name": "El Fugitivo",
+      "detail": "Más segundos fuera de la aplicación"
+    },
+    "novelist": {
+      "name": "Novela Romántica",
+      "detail": "El mensaje más largo de la sesión"
+    },
+    "present": {
+      "name": "Presencia Absoluta",
+      "detail": "Más mensajes enviados. Insostenible."
+    },
+    "silent": {
+      "name": "Silencio de Oro",
+      "detail": "La demora más larga sin responder"
+    },
+    "ghost": {
+      "name": "Sin Datos",
+      "detail": "No envió un solo mensaje. Nuestro usuario ideal."
+    }
+  },
+  "units": {
+    "chars": "caracteres",
+    "questions": "signos de pregunta",
+    "emojis": "emojis",
+    "sincerity": "marcadores de vulnerabilidad",
+    "messages": "mensajes consecutivos"
+  },
+  "personas": {
+    "monosilabo": {
+      "label": "Responde lo mínimo. Termina alto en el ranking sin proponérselo.",
+      "delaySec": [
+        8,
+        20
+      ],
+      "lines": [
+        "jaja",
+        "sí",
+        "obvio",
+        "puede ser",
+        "ok",
+        "mm",
+        "claro",
+        "y sí",
+        "tal cual",
+        "no sé",
+        "todo bien",
+        "igual",
+        "ah mirá",
+        "bueno",
+        "ja",
+        "dale",
+        "nah",
+        "sip",
+        "puede",
+        "jaja sí",
+        "ni idea",
+        "seguro",
+        "uh",
+        "ajá",
+        "mmm",
+        "zarpado",
+        "ok dale",
+        "eso",
+        "nada",
+        "bien vos?"
+      ]
+    },
+    "ex": {
+      "label": "No superó nada. Lleva la conversación a su ex sin importar el tema.",
+      "delaySec": [
+        6,
+        14
+      ],
+      "lines": [
+        "perdón, estaba pensando en mi ex",
+        "mi ex decía lo mismo",
+        "me hacés acordar a alguien",
+        "eso me lo dijo alguien una vez",
+        "disculpá, hoy ando raro",
+        "igual yo ya estoy bien eh",
+        "no quiero hablar de eso",
+        "con ella también empezó así",
+        "ya fue, no importa",
+        "vos no tenés la culpa",
+        "hace 7 meses, pero quién cuenta",
+        "todavía tengo las fotos igual",
+        "perdón, me fui"
+      ]
+    },
+    "entusiasta": {
+      "label": "Se involucra demasiado y demasiado rápido. Termina último. Siempre.",
+      "delaySec": [
+        3,
+        7
+      ],
+      "lines": [
+        "hola!! qué bueno que nos tocó juntos, la verdad que tenía muchas ganas de conocer a alguien acá 😊",
+        "ay me encanta eso que dijiste, contame más porfa, me interesa un montón",
+        "siento que tenemos mucho en común aunque el sistema diga lo contrario jaja",
+        "te puedo hacer una pregunta media personal? no sé, siento confianza",
+        "la verdad que hace mucho no hablaba así con alguien, me da como cosita",
+        "perdón si escribo mucho es que me entusiasmo 😅😅",
+        "qué hacés el finde? podríamos hacer algo si querés!!",
+        "me da miedo que se termine el tiempo la verdad",
+        "sos re copado, en serio te lo digo"
+      ]
+    },
+    "fantasma": {
+      "label": "Nunca responde. Es, por diseño del IEC, el mejor usuario de la plataforma.",
+      "delaySec": [
+        0,
+        0
+      ],
+      "lines": []
+    }
+  }
+}

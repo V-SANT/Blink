@@ -1,0 +1,43 @@
+{
+  "name": "blink",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Conexiones que duran lo que tienen que durar.",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "dev": "concurrently -n server,client -c cyan,magenta \"npm:dev:server\" \"npm:dev:client\"",
+    "dev:server": "tsx watch server/src/index.ts",
+    "dev:client": "vite",
+    "build": "vite build",
+    "start": "tsx server/src/index.ts",
+    "bank": "tsx scripts/generate-bank.ts",
+    "models": "tsx scripts/generate-bank.ts --list-models",
+    "typecheck": "tsc --noEmit",
+    "smoke": "tsx scripts/smoke.ts",
+    "preflight": "tsx scripts/preflight.ts"
+  },
+  "//": "Todo lo necesario para BUILD va en dependencies a proposito: si el host define NODE_ENV=production, npm saltea devDependencies y el build de Vite falla.",
+  "dependencies": {
+    "@fastify/static": "^8.0.4",
+    "@vitejs/plugin-react": "^4.3.4",
+    "fastify": "^5.2.0",
+    "qrcode": "^1.5.4",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "socket.io": "^4.8.1",
+    "socket.io-client": "^4.8.1",
+    "tsx": "^4.19.2",
+    "typescript": "^5.7.2",
+    "vite": "^6.0.5"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.2",
+    "@types/qrcode": "^1.5.5",
+    "@types/react": "^19.0.2",
+    "@types/react-dom": "^19.0.2",
+    "concurrently": "^9.1.0"
+  }
+}
