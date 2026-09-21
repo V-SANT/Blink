@@ -12,7 +12,7 @@ No es una app real. Es una demo de teatro con soporte de software.
 
 ## Cómo probarlo
 
-### Nivel 1 — Solo, en 60 segundos
+### Nivel 1 — Solo, en 90 segundos
 
 ```bash
 npm install
